@@ -19,6 +19,8 @@
 		1E206FC527992DC30050FB88 /* NowPlayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E206FC127992DC30050FB88 /* NowPlayable.swift */; };
 		1E206FC627992DC30050FB88 /* NowPlayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E206FC227992DC30050FB88 /* NowPlayableError.swift */; };
 		1E206FC727992DC30050FB88 /* NowPlayableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E206FC327992DC30050FB88 /* NowPlayableCommand.swift */; };
+		1E40FDC4279C14C5001B173A /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40FDC3279C14C5001B173A /* PlayListTableViewCell.swift */; };
+		1E40FDC8279CF8DC001B173A /* MediaInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40FDC7279CF8DC001B173A /* MediaInfoViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1E206FC127992DC30050FB88 /* NowPlayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayable.swift; sourceTree = "<group>"; };
 		1E206FC227992DC30050FB88 /* NowPlayableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayableError.swift; sourceTree = "<group>"; };
 		1E206FC327992DC30050FB88 /* NowPlayableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayableCommand.swift; sourceTree = "<group>"; };
+		1E40FDC3279C14C5001B173A /* PlayListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListTableViewCell.swift; sourceTree = "<group>"; };
+		1E40FDC7279CF8DC001B173A /* MediaInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +72,8 @@
 		1E206F9F279901190050FB88 /* HLS */ = {
 			isa = PBXGroup;
 			children = (
-				1E206FA0279901190050FB88 /* AppDelegate.swift */,
-				1E206FA2279901190050FB88 /* SceneDelegate.swift */,
-				1E206FBB27992B870050FB88 /* PlayerView.swift */,
-				1E206FBD27992CD60050FB88 /* AssetPlayer.swift */,
-				1E206FBF27992DC30050FB88 /* NowPlayable */,
-				1E206FA4279901190050FB88 /* ViewController.swift */,
-				1E206FA6279901190050FB88 /* Main.storyboard */,
+				1E40C504279D75FB00517F0B /* Application */,
+				1E40FDC5279CF86E001B173A /* PlayerScene */,
 				1E206FA92799011B0050FB88 /* Assets.xcassets */,
 				1E206FAB2799011B0050FB88 /* LaunchScreen.storyboard */,
 				1E206FAE2799011B0050FB88 /* Info.plist */,
@@ -91,6 +90,53 @@
 				1E206FC327992DC30050FB88 /* NowPlayableCommand.swift */,
 			);
 			path = NowPlayable;
+			sourceTree = "<group>";
+		};
+		1E40C502279D75CB00517F0B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1E206FBD27992CD60050FB88 /* AssetPlayer.swift */,
+				1E206FBF27992DC30050FB88 /* NowPlayable */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		1E40C503279D75E300517F0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1E206FA4279901190050FB88 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1E40C504279D75FB00517F0B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1E206FA0279901190050FB88 /* AppDelegate.swift */,
+				1E206FA2279901190050FB88 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1E40FDC5279CF86E001B173A /* PlayerScene */ = {
+			isa = PBXGroup;
+			children = (
+				1E40C503279D75E300517F0B /* Controller */,
+				1E40C502279D75CB00517F0B /* Util */,
+				1E40FDC6279CF879001B173A /* View */,
+			);
+			path = PlayerScene;
+			sourceTree = "<group>";
+		};
+		1E40FDC6279CF879001B173A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E206FA6279901190050FB88 /* Main.storyboard */,
+				1E206FBB27992B870050FB88 /* PlayerView.swift */,
+				1E40FDC3279C14C5001B173A /* PlayListTableViewCell.swift */,
+				1E40FDC7279CF8DC001B173A /* MediaInfoViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +214,13 @@
 				1E206FC627992DC30050FB88 /* NowPlayableError.swift in Sources */,
 				1E206FA5279901190050FB88 /* ViewController.swift in Sources */,
 				1E206FBE27992CD60050FB88 /* AssetPlayer.swift in Sources */,
+				1E40FDC4279C14C5001B173A /* PlayListTableViewCell.swift in Sources */,
 				1E206FC527992DC30050FB88 /* NowPlayable.swift in Sources */,
 				1E206FBC27992B870050FB88 /* PlayerView.swift in Sources */,
 				1E206FA1279901190050FB88 /* AppDelegate.swift in Sources */,
 				1E206FC427992DC30050FB88 /* NowPlayableMetadata.swift in Sources */,
 				1E206FA3279901190050FB88 /* SceneDelegate.swift in Sources */,
+				1E40FDC8279CF8DC001B173A /* MediaInfoViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
