@@ -9,7 +9,7 @@ HTTP 라이브 스트리밍이라 불리지만 주문형 스트리밍(VOD) 이�
 - m3u : 멀티미디어 파일의 재생목록을 관리하는 파일
 - ts : MPEG-2 의 Transport Stream 포맷
 
-출처: https://littlecarbb.tistory.com/entry/스트리밍Streaming-용어정리-1-HLSHttp-Live-Streaming [Shameless Simon]   
+  
 </br><br/>
 ### 여기서 잠깐! VOD란?
 Video On Demand의 약어로 서비스 이용자의 요구에 따라 영화나 뉴스 등의 영상 기반 서비스를 전화선이나 케이블을 통해 제공하는 새로운 개념의 영상 서비스 사업을 말합니다.
@@ -43,7 +43,7 @@ m3u8안에 또 여러개의 m3u8 url이 있네요.
 #EXT-X-PLAYLIST-TYPE:VOD
 #EXT-X-VERSION:3
 #EXT-X-MEDIA-SEQUENCE:1
-#EXTINF:10.000,
+#EXTINF:10.000, // 옛날엔 10초 권장이었는데 애플 공홈 보니까 6초네요. ㅎㅎ 
 https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/segment1_0_av.ts
 #EXTINF:10.000,
 https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/segment2_0_av.ts
@@ -52,15 +52,29 @@ https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_4
 
 //너무 길어서 짤랐습니다.
 ```
+
+<img src="https://user-images.githubusercontent.com/73683735/153635222-f42749d6-e796-48aa-976f-59655b00a954.png" width = "600">
 이번엔 ts파일 여러개가 들어 있었습니다.  
 
 이렇게 영상을 잘게 쪼개어 파일들로 나눠 담고 스트리밍 하는 기술을 HLS 이라고 합니다. 
 
-그러면 라이브 스트리밍 앱이나 라이브 커머스 앱들은 보통 채팅 까지 같이 구현되어 있는데 채팅과 화면 사이의 갭차이를 최대한 줄여야겠네요. 호달달  
 
 ### m3u8 메타데이터 명령어
 
 <img src="https://user-images.githubusercontent.com/73683735/150315051-524a8711-cde5-42bb-8329-beddb2ef689c.png" width = "600">  
-출처 : https://aciddust.github.io/blog/post/HLS-%EC%95%BC%EB%A7%A4%EB%A1%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94-Http-Live-Streaming-A-to-Z/
+출처 : https://aciddust.github.io/blog/post/HLS-%EC%95%BC%EB%A7%A4%EB%A1%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94-Http-Live-Streaming-A-to-Z/  
+
+
+---
+
+**참고 자료**   
+
+HLS 성능 관련 영상 : https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices  
+
+Apple 기기에 HLS을 사용하여 라이브 및 동영상을 재생하기 위한 요구사항 : https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices  
+
+Free HLS m3u8 file : https://ottverse.com/free-hls-m3u8-test-urls/  
+
+HLS란? : https://littlecarbb.tistory.com/entry/스트리밍Streaming-용어정리-1-HLSHttp-Live-Streaming [Shameless Simon] 
 
 
